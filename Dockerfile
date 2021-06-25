@@ -7,5 +7,4 @@ COPY ./ ./
 EXPOSE 3001 3000
 CMD npm run setup \
 && npm run build \
-&& npm run start-api\
-&& npm run start-store\
+&& npm run start
