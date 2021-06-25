@@ -4,5 +4,5 @@ WORKDIR /var/www/html/cezerin2
 COPY package*.json ./
 RUN npm install
 COPY ./ ./
-EXPOSE 3001
-CMD npm run setup && npm run start-api
+EXPOSE 3001 3000
+CMD npm run setup && npm run start
