@@ -19,9 +19,12 @@ app.set('trust proxy', 1);
 app.use(helmet());
 app.all('*', (req, res, next) => {
 	// CORS headers
+	const { origin } = req.headers;
+
 	res.header(
 		'Access-Control-Allow-Origin',
-		security.getAccessControlAllowOrigin()
+		// security.getAccessControlAllowOrigin()
+		origin
 	);
 	res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
 	res.header('Access-Control-Allow-Credentials', 'true');
